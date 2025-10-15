@@ -1,45 +1,46 @@
-# Shell Scripts Collection
+# 🐚 Shell Scripts Collection
 
-A personal collection of utility shell scripts, organized for various system administration, setup, and daily tasks on Linux.
+Welcome to my personal collection of utility shell scripts! This repository is a curated set of tools for system administration, software installation, and daily workflow enhancements, primarily for Debian-based Linux systems.
 
-## Repository Structure
+---
 
-This repository is organized into the following directories:
+## 🚀 What's Inside?
 
-*   `autmatic_downloads/`: Scripts dedicated to automatically downloading and installing software and tools.
-*   `usfull_daily_scripts/`: A collection of scripts for common, day-to-day operations and workflow enhancements.
-*   `raspberry_OS/`: Scripts specifically tailored for use on Raspberry Pi OS.
-*   `ejemplos/`: A folder containing various example shell scripts for learning and reference.
-*   `fastfetch/`: Contains the source code for the `fastfetch` system information tool, likely included as a submodule or vendored code.
+This repository is organized into several directories, each with its own `README.md` for more specific details.
 
-## Scripts Overview
+| Directory                                       | Description                                                                                             |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 📁 [`autmatic_downloads/`](./autmatic_downloads) | Scripts to automatically download and install software and tools. Perfect for bootstrapping a new system. |
+| ⚙️ [`usfull_daily_scripts/`](./usfull_daily_scripts) | A collection of helper scripts for common, day-to-day operations and workflow enhancements.             |
+| 🍓 [`raspberry_OS/`](./raspberry_OS)             | Scripts specifically written and configured for use on **Raspberry Pi OS**.                               |
+| 📂 [`ejemplos/`](./ejemplos)                     | A folder containing various example shell scripts for learning and reference purposes.                  |
+| 🏎️ `fastfetch/`                                   | The complete source code for the `fastfetch` system information tool, included as a submodule.          |
 
-### Automatic Downloads (`autmatic_downloads/`)
-*   `install_tools.sh`: A comprehensive setup script for installing a wide range of development and command-line tools.
-*   `install_fastfetch.sh`: Clones the `fastfetch` repository, installs dependencies, and builds the tool from source.
+### Standalone Scripts
 
-### Useful Daily Scripts (`usfull_daily_scripts/`)
-*   `audio_out.sh`: Interactively switch between different audio output devices.
-*   `carga_control.sh`: Set the maximum battery charge threshold to prolong battery life.
-*   `python_env.sh`: Interactively create a new Python virtual environment.
-*   `tmux_setup.sh`: Creates a pre-configured `tmux` session for a multi-pane workflow.
-*   `update_images.sh`: Interactively set the GNOME desktop wallpaper and user profile picture.
-*   `usb.sh`: A script to toggle specific GPIO pins, likely to power cycle USB ports on a device like a Raspberry Pi.
-*   `usbip-porting.sh`: Initializes the `usbip` kernel modules to allow sharing USB devices over an IP network.
+*   `NetworkManager.sh`: 🌐 A script to configure a standard Ubuntu Server to use `NetworkManager`.
 
-### Raspberry Pi OS (`raspberry_OS/`)
-*   `NetworkManager_raspOS.sh`: Configures Raspberry Pi OS to use NetworkManager instead of the default `dhcpcd`.
+---
 
-### Root-level Scripts
-*   `NetworkManager.sh`: Configures a standard Ubuntu Server to use NetworkManager.
+## 🛠️ Usage
 
-## Usage
+Most scripts are designed to be run directly from the command line. 
 
-Ensure scripts are executable before running:
+1.  **Make the script executable:**
+    ```bash
+    chmod +x path/to/your/script.sh
+    ```
 
-```bash
-chmod +x path/to/your/script.sh
-./path/to/your/script.sh
-```
+2.  **Run the script:**
+    ```bash
+    ./path/to/your/script.sh
+    ```
 
-**Note:** Many scripts require `sudo` privileges to perform system-level changes. Please review a script's content before executing it.
+> ### ⚠️ **A Word of Caution**
+> Many of these scripts require `sudo` privileges to install software or modify system settings. Please **always review the content of a script before executing it** to understand the changes it will make to your system.
+
+---
+
+## 📝 License
+
+This repository is under the [MIT License](./LICENSE).
