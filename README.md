@@ -1,32 +1,45 @@
 # Shell Scripts Collection
 
-A personal collection of utility shell scripts for various system administration, setup, and customization tasks on Debian-based Linux distributions like Ubuntu and Raspberry Pi OS.
+A personal collection of utility shell scripts, organized for various system administration, setup, and daily tasks on Linux.
 
-## Main Scripts
+## Repository Structure
 
-*   `audio_out.sh`: An interactive script to list and switch between available audio output devices (sinks) using `pactl`.
-*   `batt_charge.sh`: A script intended to set the battery charge threshold. *(Note: The script seems incomplete as of the last review).*
-*   `carga_control.sh`: Sets the maximum battery charge threshold to a specified percentage (e.g., 80%) to help prolong battery lifespan. Requires `sudo` privileges.
+This repository is organized into the following directories:
+
+*   `autmatic_downloads/`: Scripts dedicated to automatically downloading and installing software and tools.
+*   `usfull_daily_scripts/`: A collection of scripts for common, day-to-day operations and workflow enhancements.
+*   `raspberry_OS/`: Scripts specifically tailored for use on Raspberry Pi OS.
+*   `ejemplos/`: A folder containing various example shell scripts for learning and reference.
+*   `fastfetch/`: Contains the source code for the `fastfetch` system information tool, likely included as a submodule or vendored code.
+
+## Scripts Overview
+
+### Automatic Downloads (`autmatic_downloads/`)
+*   `install_tools.sh`: A comprehensive setup script for installing a wide range of development and command-line tools.
 *   `install_fastfetch.sh`: Clones the `fastfetch` repository, installs dependencies, and builds the tool from source.
-*   `install_tools.sh`: A comprehensive setup script that installs a wide range of development and command-line tools, including Brave Browser, Fastfetch, Cava, Duf, Rust, Chafa, Zsh with Oh My Zsh, and more.
-*   `NetworkManager_raspOS.sh`: Configures Raspberry Pi OS to use NetworkManager by disabling the default `dhcpcd` client.
-*   `NetworkManager.sh`: Configures a standard Ubuntu Server to use NetworkManager for network configuration via `nmcli`.
-*   `python_env.sh`: An interactive script to create a Python virtual environment in a user-specified path and name.
-*   `tmux_setup.sh`: Creates and configures a specific `tmux` session named "chamba" with multiple windows and panes running `btop`, `cava`, `cmatrix`, `speedtest-cli`, and `fastfetch`.
-*   `update_images.sh`: An interactive script to set the GNOME desktop wallpaper and update the user's profile picture (`.face` file).
 
-## Directories
+### Useful Daily Scripts (`usfull_daily_scripts/`)
+*   `audio_out.sh`: Interactively switch between different audio output devices.
+*   `carga_control.sh`: Set the maximum battery charge threshold to prolong battery life.
+*   `python_env.sh`: Interactively create a new Python virtual environment.
+*   `tmux_setup.sh`: Creates a pre-configured `tmux` session for a multi-pane workflow.
+*   `update_images.sh`: Interactively set the GNOME desktop wallpaper and user profile picture.
+*   `usb.sh`: A script to toggle specific GPIO pins, likely to power cycle USB ports on a device like a Raspberry Pi.
+*   `usbip-porting.sh`: Initializes the `usbip` kernel modules to allow sharing USB devices over an IP network.
 
-*   `ejemplos/`: Contains various example shell scripts for learning and reference purposes. These demonstrate different shell features and commands.
-*   `fastfetch/`: Contains the source code for the `fastfetch` system information tool. This appears to be a git submodule or a local copy of the repository.
+### Raspberry Pi OS (`raspberry_OS/`)
+*   `NetworkManager_raspOS.sh`: Configures Raspberry Pi OS to use NetworkManager instead of the default `dhcpcd`.
+
+### Root-level Scripts
+*   `NetworkManager.sh`: Configures a standard Ubuntu Server to use NetworkManager.
 
 ## Usage
 
-Most scripts are designed to be run directly from the command line. Ensure they have execute permissions:
+Ensure scripts are executable before running:
 
 ```bash
-chmod +x ./script_name.sh
-./script_name.sh
+chmod +x path/to/your/script.sh
+./path/to/your/script.sh
 ```
 
-**Note:** Some scripts require `sudo` privileges to install software or modify system settings. Please review each script's content before execution to understand what it does.
+**Note:** Many scripts require `sudo` privileges to perform system-level changes. Please review a script's content before executing it.
